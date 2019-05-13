@@ -23,12 +23,12 @@ public class Factorial {
 	}
 	public static int Num ( int factorial) {
 		//decrement factorial by one and send it into a recursion.
-		if(factorial > 1) {
+		if(factorial > 0) {
 			int total  = factorial * Num(factorial - 1);	
 			return total;
 		}
 		//just to have a return value with an integer so the code will work ; ) 
-		return 0;
+		return 1;
 		
 	}
 
