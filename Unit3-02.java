@@ -12,22 +12,23 @@ public class Factorial {
 		System.out.println("what is your factorial number ?");
 		Scanner scanner = new Scanner (System.in);
 		int input = scanner.nextInt();
-		
-		if (input == 0) {
-			System.out.println("Stupid number");
+		//check if the number equals zero
+		if (input == 0 ||  input == 1) {
+			System.out.println(input);
 		}else {
-			System.out.println(Num (input));
+			System.out.println("The factorial is: " + Num (input));
 		}
 				
 
 	}
 	public static int Num ( int factorial) {
-	
-		if (factorial == 1)
-			return 1;
-		else
-			return (factorial * Num(factorial - 1));
-
+		//decrement factorial by one and send it into a recursion.
+		if(factorial > 1) {
+			int total  = factorial * Num(factorial - 1);	
+			return total;
+		}
+		//just to have a return value with an integer so the code will work ; ) 
+		return 0;
 		
 	}
 
